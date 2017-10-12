@@ -65,6 +65,7 @@ public class Main {
         testResult.put("0045,500.07.89798.fdsf..", "0045,500.7.89798.fdsf..");
         testResult.put("00qwerty", "00qwerty");
         testResult.put("00qwerty.", "00qwerty.");
+        testResult.put("abcd...055..", "abcd...55..");
         testResult.put("4589", "4589");
         testResult.put("aa8.04fff.74", "aa8.4fff.74");
         testResult.put("004589", "004589");
