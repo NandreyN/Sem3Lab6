@@ -5,7 +5,6 @@ package NandreyN;
 
 
 import java.util.StringTokenizer;
-import java.util.StringJoiner;
 import java.util.*;
 
 public class Main {
@@ -51,14 +50,21 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        if (args.length == 0) return;
+        try {
+            if (args.length == 0) throw new IllegalArgumentException("Input 1 param");
+        }
+        catch (IllegalArgumentException e)
+        {
+            System.out.println(e.getMessage());
+            System.exit(-1);
+        }
 
         System.out.println(processString(args[0]));
         test();
     }
 
     private static void test() {
-        Map<String, String> testResult = new HashMap<String, String>();
+        Map<String, String> testResult = new HashMap<>();
         testResult.put(".asd.007a.00", ".asd.7a.");
         testResult.put(".asd.007a.78.", ".asd.7a.78.");
         testResult.put("qwerty", "qwerty");
